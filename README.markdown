@@ -1,11 +1,23 @@
-# heroku-kafka-demo-java
+# Heroku Kafka Topic Viewer App
 
-A simple heroku app that demonstrates using Kafka in java.
-This demo app accepts HTTP POST requests and writes them to a topic, and has a simple page that shows the last 10 messages produced to that topic.
+A simple Heroku java app that demonstrates viewing a Kafka Topic.
+This demo app accepts HTTP POST requests and writes them to a topic, and has a simple page that shows the last 10 messages produced to that topic. You can also use my Kafka Demo Producer to crank out tons of messages instead of doing it manually
 
 You'll need to [provision](#provisioning) the app.
 
-## Provisioning
+## Quick Provisioning
+
+Push this to your new Heroku app that has access to your Kafka cluster on Heroku (Common or Private Space)
+
+Add a Config Var as follows:
+
+KAFKA_TOPIC = messages
+
+Restart the Heroku App and launch
+
+Type a message in the app form field and see it come back from the Kafka Topic
+
+## Normal Provisioning
 
 Install the kafka cli plugin:
 
